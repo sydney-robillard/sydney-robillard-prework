@@ -9,8 +9,6 @@ body {
 }
 
 div {
-  border: 0px;
-  border-color: rgb(101, 169, 185);
   height: 200px;
   width: 900px;
   position: absolute;
