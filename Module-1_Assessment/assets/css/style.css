@@ -2,10 +2,13 @@ body {
     background-image:url('../images/background.png');
 }
 
+/*full navigation bar*/
 .navbar {
     background:#ffffff;
     margin:0;
 }
+
+/*name on nav bar*/
 .navbar-brand {
     color: #ffffff;
     background:#4aaaa5;
@@ -13,16 +16,20 @@ body {
     bottom:0;
     text-align:center;
 }
+
+/*index navbar*/
 .navindex {
     border-bottom: 1px solid #7777777a;
     height:80px;
 }
 
+/*contact and portfolio navbar*/
 .navother {
     border-bottom: 1px solid #7777777a;
     height:60px;
 }
 
+/*heading on about page*/
 .indexheading {
     padding: 10px;
     margin-bottom:0;
@@ -31,6 +38,7 @@ body {
     font-weight: bold;
 }
 
+/*heading on contact and portfolio page*/
 .otherheading {
     padding:10px;
     margin-bottom:0;
@@ -39,6 +47,7 @@ body {
     font-weight:bold;
 }
 
+/*pseudocode for links*/
 a:link, a:visited {
     color: #777777;
     font-family:Arial, Helvetica, sans-serif;
@@ -49,11 +58,13 @@ a:hover {
     color: #181717;
 }
 
+/*heading on all*/
 h1 {
     color:#4aaaa5;
     margin-top:10px;
 }
 
+/*body for about page*/
 .index {
     margin-top: 100px;
     margin-bottom:80px;
@@ -61,6 +72,7 @@ h1 {
     padding:20px;
 }
 
+/*body for contact and portfolio page*/
 .contact, .portfolio {
     margin-top: 80px;
     margin-bottom:80px;
@@ -68,11 +80,13 @@ h1 {
     padding:15px;
 }
 
+/*contact page*/
 .form-control {
     margin-top:0;
     margin-bottom:20px;
 }
 
+/*text on about page*/
 text {
     color: #777777;
     font-family:Arial, Helvetica, sans-serif;
@@ -80,6 +94,7 @@ text {
     line-height:35px;
 }
 
+/*profile picture on about page*/
 #profile {
     float:left;
     width:200px;
@@ -88,20 +103,24 @@ text {
     margin-bottom:5px;
 }
 
+/*portfolio grid*/
 .grid {
     display:flex;
     flex-wrap:wrap;
 }
 
+/*columns holding grid pictures*/
 .col {
     flex:33.333%;
     max-width:33.333%;
 }
 
+/*align images within columns vertically*/
 .col img {
     vertical-align:middle;
 }
 
+/*media query for images*/
 @media screen and (max-width:950px) {
     .col {
         flex:50%;
@@ -116,6 +135,7 @@ text {
     }
 }
 
+/*media query for content width on smallest screens*/
 .col-6 {width: 50%;}
 
 .col-8 {width: 66.66%;}
@@ -125,6 +145,7 @@ text {
     .col-8 {width:100%;}
 }
 
+/*images on portfolio page*/
 #image {
     width:180px;
     height:auto;
@@ -132,6 +153,7 @@ text {
     margin-bottom:10px;
 }
 
+/*image labels*/
 .text-over-img {
     color:#ffffff;
     font-family: 'Georgia', 'Times New Roman', Times, serif;
@@ -144,6 +166,7 @@ text {
     width:180px;
 }
 
+/*fixed footer*/
 .footer {
     background:#666666; 
     height: 50px;
