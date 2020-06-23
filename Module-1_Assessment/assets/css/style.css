@@ -56,6 +56,7 @@ h1 {
 
 .index {
     margin-top: 100px;
+    margin-bottom:80px;
     background:#ffffff;
     padding:20px;
 }
@@ -115,15 +116,18 @@ text {
     }
 }
 
-@media screen and (max-width:700px) {
-    .content {
-        width:100%;
-    }
+.col-6 {width: 50%;}
+
+.col-8 {width: 66.66%;}
+
+@media only screen and (max-width: 768px) {
+    .col-6 {width: 100%;}
+    .col-8 {width:100%;}
 }
 
 #image {
-    width:160px;
-    height:150px;
+    width:180px;
+    height:auto;
     margin-top:10px;
     margin-bottom:10px;
 }
@@ -137,7 +141,7 @@ text {
     top: 65%;
     left: 50%;
     transform: translate(-50%);
-    width:160px;
+    width:180px;
 }
 
 .footer {
