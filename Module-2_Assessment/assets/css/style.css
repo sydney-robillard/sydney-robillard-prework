@@ -1,0 +1,56 @@
+body {
+    background-image:url('../images/hogwarts.png');
+    background-size: cover;
+    width:100%;
+    height:auto;
+}
+
+#title {
+    width:450px;
+    height:100px;;
+    padding:0;
+    margin:0;
+}
+
+.title p {
+    text-align:center;
+    padding:5px;
+    color:black;
+    font-family: 'Shadows Into Light', cursive;
+    font-size:22px;
+    margin:0;
+}
+
+.jumbotron {
+    background:rgba(0, 0, 0, 0.534);
+    text-align:center;
+    margin-top:10px;
+}
+
+.jumbotron p {
+    color:white;
+    font-family: 'Shadows Into Light', cursive;
+    font-size:20px;
+    width:100%;
+    text-align:center;
+}
+
+.row > button {
+    font-family: 'Shadows Into Light', cursive;
+    font-size:14px;
+}
+
+.row .p {
+    vertical-align:center;
+}
+
+.start, .count, .word, .guesses, .letters {
+    border-top:2px dotted black;
+    padding-top:15px;
+    margin-top:0;
+}
+
+.row {
+    margin:0;
+    text-align:center;
+}
