@@ -64,26 +64,27 @@ let lettersGuessed = [];
 let wrongLetters = [];
 let wins = 0;
 let losses = 0;
-let audio;
-
 
 /*game function*/
 const startFunction = function () {
 
+    //randomly select word and song
     currentWord = wordBank[Math.floor(Math.random() * wordBank.length)];   
     currentSong = songArray[Math.floor(Math.random() * songArray.length)];
-
+    //create an array of the letters for the current word
     letters = currentWord.split('');
-
+    //fill the initial variables for start of game
     spaces = [];
     guessesRemaining = 10;
     wrongLetters = [];
     lettersGuessed = [];
-
+    //fill the spaces array with underscores for the start of the game
     for (let i = 0; i < letters.length; i++) {
     spaces.push('_');
     }
-
+//push all of the following variables to HTML
+//'getElementById seems to be more straight forward than querySelector
+//because it only requires one line and reduces number of variables
 document.getElementById('currentWord').innerHTML = spaces.join(' ');
 document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
 document.getElementById('wins').innerHTML = wins;
@@ -92,7 +93,7 @@ document.getElementById('lettersGuessed').innerHTML = wrongLetters.join('');
 }
 
 function gameFunction (key) {
-
+    //makes sure the function is not called more than once for the same key press
     once: true;
 
     //Preventing same letter to be input twice
@@ -122,9 +123,11 @@ function gameFunction (key) {
         wrongLetters.push(key);
         guessesRemaining--;
     }
-
+    
+    //this array must be filled *after* the previous operations
     lettersGuessed.push(key);
 
+    //fills the following variables as 
     document.getElementById('currentWord').innerHTML = spaces.join(' ');
     document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
     document.getElementById('lettersGuessed').innerHTML = wrongLetters.join('   ');
@@ -136,6 +139,7 @@ const endFunction = function () {
     document.getElementById('guessesRemaining').innerHTML = guessesRemaining;
     document.getElementById('lettersGuessed').innerHTML = wrongLetters.join(' ');
 
+    //Determine what happens if the game is won or lost
     if (guessesRemaining === 0) {
         losses++;
         document.getElementById('losses').innerHTML = losses;
@@ -152,13 +156,29 @@ const endFunction = function () {
 
 }
 
+//Music Function
+let isPlaying = false;
+
 function musicFunction () {
+    isPlaying = true;
     let music = document.getElementById('music');
     music.src = currentSong;
     music.loop = true;
     music.load();
     music.play();
 }
+
+function musicToggle () {
+    music = document.getElementById('music');
+
+    if (isPlaying) {
+        music.pause();
+        isPlaying = false;
+    } else {
+        musicFunction();
+    }
+}    
+
 //Functions called//
 
 function eventFunction (event) {
